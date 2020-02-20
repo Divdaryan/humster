@@ -16,8 +16,9 @@ public class Wall : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(11111);
         Debug.Log(collision);
     }
 }
