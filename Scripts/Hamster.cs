@@ -5,7 +5,7 @@ using UnityEngine;
 public class Hamster : MonoBehaviour
 {
     [SerializeField] float speed = 4f;
-    [SerializeField] float jumpForce = 5f;
+    [SerializeField] float jumpForce = 10f;
 
     private bool letJump = false;
 
@@ -32,7 +32,7 @@ public class Hamster : MonoBehaviour
         if (collision.collider.tag == "Ground") {
             letJump = true;
         }
-        else if(collision.collider.tag == "Enamy")
+        else if(collision.collider.tag == "Enemy")
         {
             Destroy(gameObject);
         }
