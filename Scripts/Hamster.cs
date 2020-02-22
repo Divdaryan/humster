@@ -6,6 +6,8 @@ public class Hamster : MonoBehaviour
 {
     [SerializeField] float speed = 4f;
     [SerializeField] float jumpForce = 10f;
+    float minX = -12f;
+    float maxX = 9.4f;
 
     private bool letJump = false;
 
@@ -18,8 +20,12 @@ public class Hamster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(Input.GetAxis("Horizontal") * Time.fixedDeltaTime * speed, 0f, 0f);
-        
+
+        Vector2 hamsterPos = new Vector2(transform.position.x, transform.position.y);
+        hamsterPos.x += Input.GetAxis("Horizontal") * Time.fixedDeltaTime * speed;
+        hamsterPos.x = Mathf.Clamp(hamsterPos.x, minX, maxX);
+        transform.position = hamsterPos;
+
         if (Input.GetButtonDown("Vertical") && letJump)
         {
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0f,jumpForce), ForceMode2D.Impulse);
