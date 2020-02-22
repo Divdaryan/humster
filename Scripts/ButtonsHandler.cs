@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Attacker : MonoBehaviour
+public class ButtonsHandler : MonoBehaviour
 {
-    [SerializeField] float speed = 10f;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +13,12 @@ public class Attacker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.left * Time.deltaTime * speed);
+        
     }
+
+    public void StartGame() {
+        Debug.Log(12121);
+        FindObjectOfType<SceneLoader>().LoadNextScene();
+    }
+
 }
