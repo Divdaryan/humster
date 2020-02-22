@@ -24,7 +24,6 @@ public class Hamster : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0f,jumpForce), ForceMode2D.Impulse);
         }
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
