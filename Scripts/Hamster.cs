@@ -6,8 +6,8 @@ public class Hamster : MonoBehaviour
 {
     [SerializeField] float speed = 4f;
     [SerializeField] float jumpForce = 10f;
-    float minX = -12f;
-    float maxX = 9.4f;
+    float minX = -8.9f;
+    float maxX = 6.1f;
 
     private bool letJump = false;
 
