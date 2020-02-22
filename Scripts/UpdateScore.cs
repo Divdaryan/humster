@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wall : MonoBehaviour
+public class UpdateScore : MonoBehaviour
 {
-    
     // Start is called before the first frame update
+
+    [SerializeField] Score score;
+
     void Start()
     {
         
@@ -16,8 +18,14 @@ public class Wall : MonoBehaviour
     {
         
     }
+
     private void OnTriggerEnter2D(Collider2D otherCollider)
     {
-        Destroy(otherCollider.gameObject);
+       if (otherCollider.tag == "Enemy")
+       {
+            Debug.Log(2222);
+            score.scoreValue += 10;
+        }
     }
+
 }
