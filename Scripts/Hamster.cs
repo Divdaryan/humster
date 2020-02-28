@@ -40,6 +40,7 @@ public class Hamster : MonoBehaviour
         else if(collision.collider.tag == "Enemy")
         {
             Destroy(gameObject);
+            FindObjectOfType<SceneLoader>().LoadNextScene();
         }
     }
 
