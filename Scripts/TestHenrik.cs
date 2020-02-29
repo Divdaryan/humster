@@ -2,27 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonsHandler : MonoBehaviour
+public class TestHenrik : MonoBehaviour
 {
+    public int i;
     // Start is called before the first frame update
     void Start()
     {
-
+        print(123);
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    public void StartGame() {
-        Debug.Log("asd");
-       // FindObjectOfType<SceneLoader>().LoadNextScene();
-    }
-
-    public void RestartGame()
-    {
-        Debug.Log("asd");
+        
     }
 }
