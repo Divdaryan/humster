@@ -13,7 +13,7 @@ public class EnemyGenerator : MonoBehaviour
     {
         while (spawn)
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
             int y = Random.Range(-3, 2);
             int x = 30;
             transform.position = new Vector2(x, y); ;
