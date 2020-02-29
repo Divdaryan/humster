@@ -35,10 +35,7 @@ public class Hamster : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Ground") {
-            letJump = true;
-        }
-        else if(collision.tag == "Enemy")
+        if(collision.tag == "Enemy")
         {
             health -= 10;
             if (health <= 0)
@@ -57,6 +54,14 @@ public class Hamster : MonoBehaviour
         if (collision.collider.tag == "Ground")
         {
             letJump = false;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Ground" && collision.collider.tag != "UpdateScore")
+        {
+            letJump = true;
         }
     }
 

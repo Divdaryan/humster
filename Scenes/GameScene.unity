@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 174240156}
   - component: {fileID: 174240157}
   m_Layer: 0
-  m_Name: Hamster
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 174240155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e5d6a70a604814b949a6a4625bf420, type: 3}
+  m_Script: {fileID: 11500000, guid: b4c92c3947602ed4fbede21543143f9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
@@ -539,7 +539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &606364364
 Transform:
   m_ObjectHideFlags: 0
@@ -1269,7 +1269,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 113244, guid: b7f49308c32ea42ebb84ace455f0d7c7, type: 3}
       propertyPath: m_Name
-      value: Hamster
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 113244, guid: b7f49308c32ea42ebb84ace455f0d7c7, type: 3}
       propertyPath: m_TagString
