@@ -17,7 +17,6 @@ public class ButtonsHandler : MonoBehaviour
     }
 
     public void StartGame() {
-        Debug.Log(12121);
         FindObjectOfType<SceneLoader>().LoadNextScene();
     }
 
