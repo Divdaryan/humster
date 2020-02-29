@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyGenerator : MonoBehaviour
 {
-    public GameObject enemy;
+    public GameObject[] enemies;
     GameObject enamyInstanse;
     bool spawn = true;
     float currentSpeed = 1f;
@@ -16,8 +16,9 @@ public class EnemyGenerator : MonoBehaviour
             yield return new WaitForSeconds(1f);
             int y = Random.Range(-3, 2);
             int x = 30;
-            transform.position = new Vector2(x, y); ;
-            enamyInstanse = Instantiate(enemy, transform.position, Quaternion.identity);
+            transform.position = new Vector2(x, y);
+            int random = Random.Range(0, enemies.Length);
+            enamyInstanse = Instantiate(enemies[random], transform.position, Quaternion.identity);
         }
     }
 

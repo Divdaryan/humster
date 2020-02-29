@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 953509039}
   - component: {fileID: 953509038}
   m_Layer: 0
-  m_Name: life
+  m_Name: Life
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -747,7 +747,7 @@ GameObject:
   - component: {fileID: 1326472208}
   - component: {fileID: 1326472207}
   m_Layer: 0
-  m_Name: ingamescore
+  m_Name: Game Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1053,7 +1053,7 @@ GameObject:
   - component: {fileID: 2025799893}
   - component: {fileID: 2025799892}
   m_Layer: 0
-  m_Name: EnamyGenerator
+  m_Name: EnemyGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1071,7 +1071,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd7d5599da7e1d94c9aa7bd57085adb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 3145240982075947419, guid: dbc9f138a446314469269dc8dec1e9ac, type: 3}
+  enemies:
+  - {fileID: 9044227554750796158, guid: 7e6b87255ab58854b8bf6578b57730c0, type: 3}
+  - {fileID: 6187393738147881043, guid: 1df7c92d18495ba43b3538a828abca11, type: 3}
+  - {fileID: 8828617481906538450, guid: cd220c0c459629c47b153d5d155f9fa3, type: 3}
+  - {fileID: 7491784016444814644, guid: 37cd170344f71f44eb281e754ca9b8a5, type: 3}
+  - {fileID: 8953114468641826902, guid: 0951cf5f77846e94fb87987e40b0cda8, type: 3}
+  - {fileID: 8092283241459372945, guid: eba7ca939e505a14097f5a9374166193, type: 3}
+  - {fileID: 656281933763510688, guid: c563b79a8941deb4eac5b0ac69acd9ca, type: 3}
+  - {fileID: 3145240982075947419, guid: dbc9f138a446314469269dc8dec1e9ac, type: 3}
 --- !u!4 &2025799893
 Transform:
   m_ObjectHideFlags: 0
