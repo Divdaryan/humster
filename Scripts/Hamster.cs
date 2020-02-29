@@ -33,12 +33,12 @@ public class Hamster : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.collider.tag == "Ground") {
+        if (collision.tag == "Ground") {
             letJump = true;
         }
-        else if(collision.collider.tag == "Enemy")
+        else if(collision.tag == "Enemy")
         {
             health -= 10;
             if (health <= 0)
@@ -47,9 +47,8 @@ public class Hamster : MonoBehaviour
                 FindObjectOfType<SceneLoader>().LoadNextScene();
             }
             else {
-                healthObject.healtValue -= 10;
+                healthObject.healtValue = health;
             }
-            
         }
     }
 
