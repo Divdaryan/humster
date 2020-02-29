@@ -6,21 +6,22 @@ public class Hamster : MonoBehaviour
 {
     [SerializeField] float speed = 4f;
     [SerializeField] float jumpForce = 10f;
-    float minX = -8.9f;
-    float maxX = 6.1f;
+    private float minX = -8.9f;
+    private float maxX = 6.1f;
+    private int health = 100;
+    PlayerHealth healthObject;
 
     private bool letJump = false;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        healthObject = (PlayerHealth)FindObjectOfType(typeof(PlayerHealth));
     }
 
     // Update is called once per frame
     void Update()
     {
-
         Vector2 hamsterPos = new Vector2(transform.position.x, transform.position.y);
         hamsterPos.x += Input.GetAxis("Horizontal") * Time.fixedDeltaTime * speed;
         hamsterPos.x = Mathf.Clamp(hamsterPos.x, minX, maxX);
@@ -32,15 +33,22 @@ public class Hamster : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.collider.tag == "Ground") {
+        if (collision.tag == "Ground") {
             letJump = true;
         }
-        else if(collision.collider.tag == "Enemy")
+        else if(collision.tag == "Enemy")
         {
-            Destroy(gameObject);
-            FindObjectOfType<SceneLoader>().LoadNextScene();
+            health -= 10;
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+                FindObjectOfType<SceneLoader>().LoadNextScene();
+            }
+            else {
+                healthObject.healtValue = health;
+            }
         }
     }
 
