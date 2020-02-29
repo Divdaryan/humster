@@ -26,8 +26,19 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Vertical") && letJump)
         {
+            GetComponent<Animator>().Play("foxy_jump");
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
         }
+
+        if (Input.GetButtonDown("Horizontal") && Input.GetAxisRaw("Horizontal") > 0 && letJump)
+        {
+            GetComponent<Animator>().Play("super_fast_run");
+        }
+        else if (Input.GetButtonUp("Horizontal"))
+        { 
+            GetComponent<Animator>().Play("foxy-run");
+        }
+
     }
     
     private void OnCollisionExit2D(Collision2D collision)
@@ -42,12 +53,12 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.collider.tag == "Ground")
         {
+            GetComponent<Animator>().Play("foxy-run");
             letJump = true;
         }
     }
 
     public void HealthHeandler(int damage) {
-        Debug.Log(damage);
         health -= damage;
         if (health <= 0)
         {

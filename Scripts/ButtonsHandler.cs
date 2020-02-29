@@ -13,11 +13,11 @@ public class ButtonsHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void StartGame() {
-        FindObjectOfType<SceneLoader>().LoadNextScene();
+        FindObjectOfType<SceneLoader>().LoadStartScene();
     }
 
 }
