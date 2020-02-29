@@ -23,7 +23,6 @@ public class UpdateScore : MonoBehaviour
     {
         if (otherCollider.tag == "Enemy")
         {
-            Debug.Log(score.scoreValue);
             score.scoreValue += 10;
         }
     }
