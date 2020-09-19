@@ -21,7 +21,12 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 playerPos = new Vector2(transform.position.x, transform.position.y);
         playerPos.x += Input.GetAxis("Horizontal") * Time.fixedDeltaTime * speed;
+        if (playerPos.x > minX && Input.GetAxisRaw("Horizontal") == 0) 
+        {
+            playerPos.x -= 1f * Time.fixedDeltaTime * speed; 
+        }
         playerPos.x = Mathf.Clamp(playerPos.x, minX, maxX);
+
         transform.position = playerPos;
 
         if (Input.GetButtonDown("Vertical") && letJump)
