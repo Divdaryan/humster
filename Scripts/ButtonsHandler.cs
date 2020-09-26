@@ -17,6 +17,7 @@ public class ButtonsHandler : MonoBehaviour
     }
 
     public void StartGame() {
+        PlayerStats.score = 0;
         FindObjectOfType<SceneLoader>().LoadStartScene();
     }
 
