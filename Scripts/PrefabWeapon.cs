@@ -6,19 +6,23 @@ public class PrefabWeapon : MonoBehaviour
 {
 	public Transform firePoint;
 	public GameObject bulletPrefab;
+	bool allowfire = true;
+	float fireRate = 0.5f;
 
 	// Update is called once per frame
 	void Update()
 	{
-		if (Input.GetButtonDown("Fire1"))
+		if (Input.GetButtonDown("Fire1") && (allowfire))
 		{
-			Debug.Log(12121);
-			Shoot();
+			StartCoroutine(Shoot());
 		}
 	}
 
-	void Shoot()
+	IEnumerator Shoot()
 	{
+		allowfire = false;
 		Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+		yield return new WaitForSeconds(fireRate);
+		allowfire = true;
 	}
 }
