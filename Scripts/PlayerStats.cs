@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UpdateScore : MonoBehaviour
+public class PlayerStats : MonoBehaviour
 {
+
+    public static int score = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -16,13 +18,5 @@ public class UpdateScore : MonoBehaviour
     {
         
     }
-
-    private void OnTriggerEnter2D(Collider2D otherCollider)
-    {
-        if (otherCollider.tag == "Enemy")
-        {
-           PlayerStats.score += 10;
-        }
-    }
-
+   
 }

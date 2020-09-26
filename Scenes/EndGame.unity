@@ -581,8 +581,9 @@ GameObject:
   - component: {fileID: 425031333}
   - component: {fileID: 425031335}
   - component: {fileID: 425031334}
+  - component: {fileID: 425031336}
   m_Layer: 0
-  m_Name: scoreValue
+  m_Name: CurrentScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -638,7 +639,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1256
+  m_Text: 0
 --- !u!222 &425031335
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -647,13 +648,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425031332}
   m_CullTransparentMesh: 0
---- !u!4 &491096185 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5396004358213701072, guid: 46b0e7294d0523745b76ef8944f35517,
-    type: 3}
-  m_PrefabInstance: {fileID: 1723755981}
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &985240309
+  m_GameObject: {fileID: 425031332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afca78aa15ea8034f938b6c8472b5d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
